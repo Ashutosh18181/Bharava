@@ -12,16 +12,16 @@
 }
 
 .locate-btn {
-  background: var(--bg-glass);
+  background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   color: var(--text-primary);
   backdrop-filter: blur(12px);
 }
 
 .locate-btn:hover {
-  background: var(--accent-gold-dim);
-  border-color: var(--accent-gold);
-  color: var(--accent-gold);
+  background: var(--film-amber-dim);
+  border-color: var(--film-amber);
+  color: var(--film-amber);
 }
 
 .nearby-prompt {
@@ -33,7 +33,7 @@
 }
 
 .prompt-icon {
-  color: var(--accent-gold);
+  color: var(--film-amber);
   margin-bottom: var(--space-md);
 }
 
@@ -54,12 +54,12 @@
   gap: var(--space-md);
   padding: var(--space-lg);
   border-radius: var(--radius-lg);
-  border-left: 4px solid var(--accent-crimson);
-  background: rgba(200, 75, 75, 0.05);
+  border-left: 4px solid var(--film-crimson);
+  background: rgba(168, 64, 64, 0.05);
 }
 
 .nearby-error h4 {
-  color: var(--accent-crimson);
+  color: var(--film-crimson);
   margin-bottom: 4px;
 }
 

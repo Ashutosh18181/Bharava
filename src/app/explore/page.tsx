@@ -8,6 +8,7 @@ import { Category } from '@/data/types';
 import { useApp, getLocationsWithDistance } from '@/context/AppContext';
 import SiteCard from '@/components/SiteCard';
 import FilterBar from '@/components/FilterBar';
+import './page.css';
 
 const CATEGORIES: Category[] = [
   'temple', 'buddhist', 'fort', 'battle', 'cultural', 'festival', 'tribal', 'maritime', 'hidden'

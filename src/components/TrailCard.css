@@ -40,7 +40,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-bottom: 3px solid var(--trail-color, var(--accent-gold));
+  border-bottom: 3px solid var(--trail-color, var(--film-amber));
 }
 
 .trail-card-badge {
@@ -130,7 +130,7 @@
   content: '•';
   position: absolute;
   left: 0;
-  color: var(--accent-gold);
+  color: var(--film-amber);
 }
 
 .trail-card-footer {

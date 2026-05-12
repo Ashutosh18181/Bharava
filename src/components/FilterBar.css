@@ -1,83 +1,78 @@
+/* ─── FilterBar ──────────────────────────────────────────────── */
 .filter-bar {
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
   margin-bottom: var(--space-2xl);
+  padding: var(--space-lg);
   background: var(--bg-surface);
-  padding: var(--space-md);
-  border-radius: var(--radius-lg);
   border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
 }
 
 .filter-group {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--space-md);
 }
 
 .filter-label {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
   color: var(--text-muted);
   white-space: nowrap;
+  padding-top: 8px;
   min-width: 80px;
+  flex-shrink: 0;
 }
 
 .filter-scroll {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   gap: var(--space-sm);
-  overflow-x: auto;
-  padding-bottom: 4px;
-  scrollbar-width: thin;
-}
-
-.filter-scroll::-webkit-scrollbar {
-  height: 4px;
 }
 
 .filter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   padding: 6px 16px;
-  background: var(--bg-elevated);
-  border: 1px solid var(--border-medium);
   border-radius: var(--radius-full);
-  color: var(--text-secondary);
-  font-size: 0.85rem;
-  font-weight: 500;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  background: var(--glass-light);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
   cursor: pointer;
-  white-space: nowrap;
   transition: all var(--transition-fast);
+  text-transform: capitalize;
 }
 
 .filter-pill:hover {
-  background: var(--bg-glass-hover);
   color: var(--text-primary);
-  border-color: var(--accent-gold);
+  border-color: var(--border-medium);
+  background: var(--glass-hover);
 }
 
 .filter-pill.active {
-  background: var(--accent-gold);
-  color: #0a0a0f;
-  border-color: var(--accent-gold);
+  background: var(--film-amber-dim);
+  border-color: var(--film-amber);
+  color: var(--film-amber);
 }
 
+/* Trail pills slightly different style */
 .trail-filters {
   border-top: 1px solid var(--border-subtle);
   padding-top: var(--space-md);
+  margin-top: var(--space-xs);
 }
 
 .trail-pill.active {
-  background: var(--accent-teal);
-  color: #0a0a0f;
-  border-color: var(--accent-teal);
-}
-
-@media (max-width: 768px) {
-  .filter-group {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-sm);
-  }
+  background: rgba(74,142,132,0.12);
+  border-color: var(--film-teal);
+  color: var(--film-teal);
 }

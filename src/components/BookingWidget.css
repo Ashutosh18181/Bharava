@@ -1,0 +1,112 @@
+.booking-widget-wrapper {
+  position: relative;
+  z-index: 20;
+  margin-top: -40px; /* Pull up over hero section */
+  margin-bottom: var(--space-3xl);
+  display: flex;
+  justify-content: center;
+  padding: 0 var(--space-lg);
+}
+
+.booking-widget {
+  background: var(--bg-surface);
+  border-radius: var(--radius-xl);
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-subtle);
+  max-width: 900px;
+  width: 100%;
+}
+
+.booking-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.booking-field label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.booking-input-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: var(--bg-elevated);
+  border-radius: var(--radius-md);
+  padding: 8px 12px;
+  border: 1px solid var(--border-subtle);
+}
+
+.booking-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  outline: none;
+  font-family: var(--font-body);
+}
+
+/* Fix for date input icon in webkit */
+.booking-input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.booking-input option {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+}
+
+.booking-icon {
+  color: var(--film-amber);
+  opacity: 0.8;
+}
+
+.booking-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--border-medium);
+}
+
+.booking-action {
+  flex-shrink: 0;
+}
+
+.booking-btn {
+  padding: 12px 32px;
+  border-radius: var(--radius-full);
+}
+
+@media (max-width: 768px) {
+  .booking-widget {
+    flex-direction: column;
+    align-items: stretch;
+    padding: var(--space-lg);
+  }
+  
+  .booking-divider {
+    width: 100%;
+    height: 1px;
+  }
+  
+  .booking-action {
+    margin-top: var(--space-sm);
+  }
+  
+  .booking-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

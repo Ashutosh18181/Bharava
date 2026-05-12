@@ -1,4 +1,5 @@
 import HeroSection from '@/components/HeroSection';
+import BookingWidget from '@/components/BookingWidget';
 import NearbyFeed from '@/components/NearbyFeed';
 import SiteCard from '@/components/SiteCard';
 import TrailCard from '@/components/TrailCard';
@@ -17,6 +18,9 @@ export default function Home() {
     <div className="home-page">
       {/* 1. Hero — fullscreen cinematic banner + discovery pills */}
       <HeroSection />
+      
+      {/* Premium Booking Widget (Reference 1 style) */}
+      <BookingWidget />
 
       {/* 2. Flagship Stories — dark bg, premium editorial cards */}
       <section className="flagship-section">
