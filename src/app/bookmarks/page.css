@@ -1,0 +1,12 @@
+.mb-8 { margin-bottom: var(--space-2xl); }
+.mb-2 { margin-bottom: var(--space-xs); }
+.mb-4 { margin-bottom: var(--space-md); }
+.mb-6 { margin-bottom: var(--space-xl); }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.py-12 { padding-top: var(--space-3xl); padding-bottom: var(--space-3xl); }
+.rounded-lg { border-radius: var(--radius-lg); }
+.text-center { text-align: center; }
+
+.flex { display: flex; }
+.items-center { align-items: center; }
+.gap-3 { gap: 12px; }

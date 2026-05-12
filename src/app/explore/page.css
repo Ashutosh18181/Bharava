@@ -1,0 +1,36 @@
+.explore-header {
+  margin-bottom: var(--space-xl);
+}
+
+.max-w-2xl {
+  max-width: 42rem;
+}
+
+.mb-6 {
+  margin-bottom: var(--space-xl);
+}
+
+.mb-4 {
+  margin-bottom: var(--space-md);
+}
+
+.mt-4 {
+  margin-top: var(--space-md);
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.py-12 {
+  padding-top: var(--space-3xl);
+  padding-bottom: var(--space-3xl);
+}
+
+.rounded-lg {
+  border-radius: var(--radius-lg);
+}
+
+.text-center {
+  text-align: center;
+}

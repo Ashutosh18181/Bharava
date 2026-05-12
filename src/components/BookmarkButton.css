@@ -1,0 +1,35 @@
+.bookmark-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  padding: 6px;
+  border-radius: var(--radius-full);
+}
+
+.bookmark-btn:hover {
+  color: var(--text-primary);
+  background: var(--bg-glass);
+}
+
+.bookmark-btn.saved {
+  color: var(--accent-gold);
+}
+
+.bookmark-btn.saved:hover {
+  background: var(--accent-gold-dim);
+}
+
+.icon-saved {
+  fill: var(--accent-gold-dim);
+}
+
+.bookmark-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+}

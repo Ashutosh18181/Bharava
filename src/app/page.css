@@ -1,0 +1,159 @@
+/* ─── Homepage ───────────────────────────────────────────────── */
+.home-page { background: var(--bg-default); }
+
+/* ─── Section: Featured Stories ─── */
+.flagship-section {
+  padding: var(--space-3xl) 0;
+  background: var(--bg-default);
+}
+
+.flagship-section .section-header {
+  margin-bottom: var(--space-2xl);
+}
+
+/* ─── Section: Editorial Feature Block ─── */
+.editorial-section {
+  padding: var(--space-3xl) 0;
+  background: var(--film-warm);
+  position: relative;
+  overflow: hidden;
+}
+
+.editorial-section::before {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0; left: 0;
+  width: 50%;
+  background: rgba(0,0,0,0.2);
+  pointer-events: none;
+}
+
+.editorial-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.editorial-image-wrap {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.editorial-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.editorial-image-wrap:hover img { transform: scale(1.04); }
+
+.editorial-image-badge {
+  position: absolute;
+  bottom: var(--space-md);
+  left: var(--space-md);
+  background: var(--film-amber);
+  color: #0a0806;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+}
+
+.editorial-text { color: var(--text-on-dark); }
+
+.editorial-text .section-label { color: var(--film-amber); }
+
+.editorial-text h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  color: var(--text-on-dark);
+  margin-bottom: var(--space-lg);
+  line-height: 1.2;
+}
+
+.editorial-text p {
+  color: var(--text-on-dark-muted);
+  line-height: 1.8;
+  margin-bottom: var(--space-xl);
+  font-size: 1.05rem;
+}
+
+.editorial-text .btn-outline-light { margin-top: var(--space-sm); }
+
+/* ─── Section: Heritage Trails ─── */
+.trails-section {
+  padding: var(--space-3xl) 0;
+  background: var(--bg-default);
+}
+
+/* ─── Section: Nearby/Discovery ─── */
+.nearby-section {
+  padding: var(--space-3xl) 0;
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* ─── CTA section ─── */
+.cta-section {
+  padding: var(--space-3xl) 0;
+  background: var(--film-warm);
+  text-align: center;
+}
+
+.cta-inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.cta-inner h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--text-on-dark);
+  margin-bottom: var(--space-md);
+}
+
+.cta-inner p {
+  color: var(--text-on-dark-muted);
+  margin-bottom: var(--space-xl);
+  font-size: 1.05rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ─── Mobile helpers ─── */
+.mobile-view-all {
+  margin-top: var(--space-lg);
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .mobile-view-all { display: block; }
+
+  .editorial-inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .editorial-section::before { display: none; }
+
+  .cta-buttons { flex-direction: column; align-items: center; }
+}
+
+/* Misc utilities used in page.tsx */
+.w-full { width: 100%; }
+.justify-center { justify-content: center; }
+.text-gold { color: var(--film-amber); }
+.mb-6 { margin-bottom: var(--space-xl); }

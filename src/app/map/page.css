@@ -1,0 +1,135 @@
+.map-page-container {
+  display: flex;
+  height: calc(100vh - var(--nav-height));
+  margin-top: var(--nav-height);
+  overflow: hidden;
+}
+
+.map-sidebar {
+  width: 320px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border-subtle);
+  background: rgba(10, 10, 15, 0.95);
+  z-index: 10;
+  border-radius: 0;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+}
+
+.map-sidebar-header {
+  padding: var(--space-lg);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.map-sidebar-header h1 {
+  font-size: 1.5rem;
+}
+
+.map-sidebar-content {
+  padding: var(--space-lg);
+  overflow-y: auto;
+  flex: 1;
+}
+
+.map-trail-filters {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.map-trail-btn {
+  text-align: left;
+  padding: 10px 14px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid transparent;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.map-trail-btn:hover {
+  background: var(--bg-glass-hover);
+  color: var(--text-primary);
+}
+
+.map-trail-btn.active {
+  background: var(--bg-glass-hover);
+  color: var(--text-primary);
+  border-color: var(--border-medium);
+}
+
+.map-legend {
+  border-top: 1px dashed var(--border-subtle);
+  padding-top: var(--space-lg);
+}
+
+.legend-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.map-area {
+  flex: 1;
+  position: relative;
+}
+
+.map-page-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--accent-gold);
+}
+
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  .map-page-container {
+    flex-direction: column-reverse;
+  }
+  
+  .map-sidebar {
+    width: 100%;
+    height: 35vh;
+    border-right: none;
+    border-top: 1px solid var(--border-subtle);
+  }
+  
+  .map-sidebar-header {
+    padding: var(--space-md);
+  }
+  
+  .map-sidebar-header h1 {
+    font-size: 1.25rem;
+  }
+  
+  .legend-items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
